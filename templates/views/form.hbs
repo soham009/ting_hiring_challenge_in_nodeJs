@@ -1,0 +1,72 @@
+
+<html>
+<head>
+    <title>Winner Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .win_form{
+            margin: 0 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class='row'>
+            <div class="col-12 mt-4 mx-0 text-center">
+                <h1><img src="img/BlackYellowLogo.png" style="height: 100px;width: 100px;">Ting Hiring Challenge</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <h1 style="color: #fae90c">CONGRATULATIONS</h1>
+        <h1 style="color: #fae90c">DEAR WINNER PLEASE FILL THE FORM </h1>
+        <h4 style="color: #fae90c">OUR TEAM WILL GET BACK TO YOU!</h4>
+    </div>
+
+    <div class="container text-center mt-5">
+        <form action="/success" method="post">
+            
+            <div class="win_form">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="player_name" name="player_name" class="form-control" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="player_gender" name="player_gender" required>
+                            <option selected disabled style="display: none" value="">Select Your Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <input type="text" id="player_email" name="player_email" value="{{player_email}}" class="form-control" readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="player_mobile_no" name="player_mobile_no" class="form-control" placeholder="Enter Your Mobile Number" pattern="(7|8|9)\d{9}" oninvalid="setCustomValidity('Wrong Number.Please Enter Valid Number ')" onchange="try{setCustomValidity('')}catch(e){}" required>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <textarea rows="4" id="player_address" name="player_address" class="form-control" placeholder="Enter Your Address" required></textarea>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <input type="hidden" id="_id" name="_id" value="{{player_id}}"></input>
+                        <input type="hidden" id="player_winning" name="player_winning" value="Nothing"></input>
+                        <button  type="submit" class="btn btn-warning btn-block">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

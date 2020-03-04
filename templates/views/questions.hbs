@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .hor_bodr{
+            border-bottom: 2px solid;
+            border-bottom-color: #fae90c;
+            margin: 0 200px;
+            
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class='row'>
+            <div class="col-12 mt-4 mx-0 text-center">
+                <h1><img src="img/BlackYellowLogo.png" style="height: 100px;width: 100px;">Ting Hiring Challenge</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <h4 style="color: #fae90c">ANSWERS THE QUESTIONS BELOW TO GET ANOTHER CHANCE TO</h4>
+        <h1 style="color: #fae90c">SPIN THE WHEEL OF SELF LOVE!</h1>
+    </div>
+
+    <div class="container text-center mt-5">
+        <form action="/retry" method="post">
+            <input type="hidden" id="player_email" name="player_email" value="{{player_email}}"></input>
+            <input type="hidden" id="_id" name="_id" value="{{player_id}}"></input>
+
+            <div class="form-group">
+                <h5 for="exampleInputEmail1">What is the team strength of Ting?</h5>
+            </div>
+
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question1" id="inlineRadio1" value="100" required>
+                <label class="form-check-label" for="inlineRadio1">100</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question1" id="inlineRadio2" value="250+" required>
+                <label class="form-check-label" for="inlineRadio2">250+</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question1" id="inlineRadio3" value="500" required>
+                <label class="form-check-label" for="inlineRadio3">500</label>
+            </div>
+            
+            <div class="hor_bodr mt-4"></div>
+            
+            <div class="form-group mt-4">
+                <h5 for="exampleInputEmail1">From the below where Ting dosen't have it's office?</h5>
+            </div>
+
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="inlineRadio1" value="Mumbai" required>
+                <label class="form-check-label" for="inlineRadio1">Mumbai</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="inlineRadio2" value="Chennai" required>
+                <label class="form-check-label" for="inlineRadio2">Chennai</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="inlineRadio3" value="Delhi" required>
+                <label class="form-check-label" for="inlineRadio3">Delhi</label>
+            </div>
+            
+            <div class="hor_bodr mt-4"></div>
+            
+            <div class="mt-3">
+                <button type="submit" class="btn btn-warning">SUBMIT</button>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
