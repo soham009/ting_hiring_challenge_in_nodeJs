@@ -22,6 +22,7 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 
 // Creating Application using the Express Module
 const app = express()
+const port = process.env.PORT || 8000
 
 //<----- Setup handlebars engine and views location -----
 app.set('view engine', 'hbs')
@@ -190,6 +191,6 @@ app.get('*', (req, res) => {
 //</----- URLs and their Responses -----
 
 
-app.listen(8000, () => {
+app.listen(port, () => {
 	console.log('Server is up on port 8000.')
 })
