@@ -39,7 +39,7 @@ app.use(express.static(publicDirectoryPath))
 
 //<----- MongoDB Configurations -----
 //Establishing Connecting with MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/ting-hiring-challenge', {
+mongoose.connect('mongodb+srv://soham:tinghiringchallenge@cluster0-zhilg.mongodb.net/test?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useCreateIndex: true
 })
